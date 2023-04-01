@@ -1,0 +1,125 @@
+Aula 03:
+
+Maneira correta de definir classe no react é className="" e nao so class=""
+
+
+
+
+Aula 04:
+Componentes - Permite dividir a aplicação em partes, é criado um arquivo para colocar os componentes
+
+pra utilizar o componente: vai no App.js e usa import HelloWorld from './components/HelloWorld'
+depois vai no HTML e usa <HelloWorld/>
+
+
+
+
+Aula 05:
+Props - são valores passados para componentes, para deixa-los mais dinâmicos
+
+um componente filho vai receber uma propriedade de um componente pai
+
+
+
+
+Aula 07:
+
+Os React Fragments permite a criação de um componente sem o elemento pai
+a sintaxe é <> e </>, tag vazia
+
+o uso é situacional
+
+
+
+
+
+Aula 09:
+Os eventos de React são os mesmos eventos do DOM
+ou seja, tem eventos para responder a um click
+
+o evento é atrelado a uma tag que irá excutá-lo
+
+este método deve ser criado no componente
+
+
+
+
+Aula 10:
+
+useState é um hook do React
+
+com ele conseguimos manusear o estado de um componente de forma simples
+estado são os dados que o componente está lidando
+
+evento onChange={(e) => setName(e.target.value):
+vai fazer com que a cada letra que digita dentro do campo em que esta inserido, modifica o valor so state
+
+
+
+
+Aula 11:
+Os métodos tambem podem ser passados por props, ou seja, um componente filho pode ativar o metodo do componente pai
+
+o método será acessado por meio de um evento
+
+
+
+
+Aula 12:
+Podemos atrelar a exibição de algum elemento a um if
+essa ação é chamada de renderização condicional
+
+Bloco abaixo de if simplificado em react, ex:
+
+{userEmail && (
+                <div>
+                    <p>O email do usuário é:{userEmail}</p>
+                    <button onClick={limparEmail}>Limpar Email</button>
+                </div>
+)}
+
+
+
+
+Aula 13:
+Renderização de listas - Pra isso é necessario uma array, dps disso se utiliza a função map para percorrer cada um dos itens
+
+é possivel unir operadores condicionais com a renderização de listas
+
+olhar o codigo de OutraLista.js pra ver como fazer o if e o else no react
+
+
+
+
+Aula 14:
+State Lift é uma tecnica utilizada para compartilhar o state
+
+Leitura para a linha return <> {nome && <p>{gerarSaudacao(nome)}<p/>}
+So vai executar a linha se tiver algum nome no state
+
+
+
+
+Aula 15:
+React Router é um pacote para mudança de URLs da aplicação
+
+podemos assim acessar outras views, sem o page reload
+
+precisa instalar um pacote para usa-lo: npm install react-router-dom
+
+usando o exact antes do path, a path so sera acessada quando o path for exatamente alguma coisa, ex path="/", então a path / so sera acessada se usar exatamente isso, nao sera mais acessado se usar /empresa ou /contato por exemplo, se nao entender olhar na aula 15 min 8:00
+
+codes criados na aula: alteração do App.js, criação das pages, o layout Navbar.js e Footer.js, e o Navbar.module.css
+
+
+
+
+Aula 16:
+React icons é um pacote de ícones externos
+
+Precisa adicionar ao projeto atraves do npm
+
+Permite adicionar ícones ao projeto com uma sintaxe parecida com a de componentes
+
+
+codes criados na aula: alteração do Footer.js

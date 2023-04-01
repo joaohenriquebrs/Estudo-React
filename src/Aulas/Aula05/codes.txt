@@ -1,0 +1,55 @@
+src/App.js-
+
+import HelloWorld from "./components/HellWorld";
+import SayMyName from "./components/SayMyName";
+import Pessoa from "./components/Pessoa";
+
+function App() {
+  return (
+    <div className="App">
+      <HelloWorld />
+      <SayMyName nome="Matheus" />
+      <SayMyName nome="João" />
+      <SayMyName nome="Francisco" />
+      <Pessoa
+        nome="Rodrigo"
+        idade="28"
+        profissao="Programador"
+        foto="https://via.placeholder.com/150"
+      />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+components/Pessoa -
+
+function Pessoa({ nome, idade, profissao, foto }) {
+    return (
+      <div>
+        <img src={foto} alt={nome} />
+        <h2>Nome: {nome}</h2>
+        <p>Idade: {idade}</p>
+        <p>Profissão: {profissao}</p>
+      </div>
+    );
+  }
+ 
+  export default Pessoa;
+
+
+
+components/SayMyName -
+
+function SayMyName(props) {
+    return (
+      <div>
+        <p>Fala aí {props.nome}, suave?</p>
+      </div>
+    );
+  }
+ 
+  export default SayMyName;

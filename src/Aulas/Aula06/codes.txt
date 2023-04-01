@@ -1,0 +1,61 @@
+index.js -
+
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+
+
+index.css -
+
+body {
+  padding: 50px;
+  background-color: #efefef;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  background-color: #999;
+  padding: 10px;
+}
+
+
+
+components/Frase.module.css -
+
+.fraseContainer {
+  background-color: #333;
+  border-bottom: 3px solid #111;
+}
+
+.fraseContent {
+  color: #fff;
+  background-color: #333;
+  margin: 0;
+}
+
+
+
+components/Frase.js -
+
+import styles from "./Frase.module.css";
+
+function Frase() {
+  return (
+    <div className={styles.fraseContainer}>
+      <p className={styles.fraseContent}>Este componente é apenas uma frase!</p>
+    </div>
+  );
+}
+
+export default Frase;
